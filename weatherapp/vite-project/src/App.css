@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.weather-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #023e8a;
+    height: 100%;
+    width: 100%;
+}
+
+.inputCard {
+    width: 520px;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 3rem 2rem 3rem 3rem;
+    background-image: url('./assets/sara-the-freak-A4UojtraSrw-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem 0 2rem 2rem;
+    border-radius: 1rem;
+}
+
+.form input {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-right: 10px;
+    border: 2px solid #170b42;
+    transition: all 0.25s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px 
+}
+
+.form input:hover{
+    box-shadow: inset 0 0 10px #03045e;
+}
+
+.form button {
+    font-size: 1.5rem;
+    border: 2px solid #170b42;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.form button:hover {
+    box-shadow: inset 0 0 10px #03045e;
+}
+
+.inputCard .infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 2rem;
+    color: white;
+    text-shadow: 0 0 10px #050631;
+}
+
+.infos .info {
+    margin-bottom: 1rem;
+}
+
+.DateTime {
+    position: absolute;
+    bottom: 10%;
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 0 0 10px rgb(164, 165, 241);
+}
+
+.weatherDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 3rem 3rem 3rem 1rem;
+    width: 640px;
+    background-image: url('./assets/daniel-ramirez-q4TfWtnz_xw-unsplash.jpg');
+    background-size: cover;
+    border-radius: 1rem;
+    transition: all 0.3s;
+}
+
+.weatherDetail .icon {
+    background-color: rgba(77, 149, 182, 0.8);
+    box-shadow: 0 0 10px rgb(58, 58, 163);
+    border: 1px solid rgb(117, 110, 207);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    transition: all 0.5s;
+}
+
+.weatherDetail .icon:hover {
+    transform: scale(1.05);
+}
+
+.icon h2 {
+    color: white;
+    text-shadow: 0 0 10px #082b5a,
+                 0 0 20px #082b5a;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    height: 350px;
+}
+
+.weather-info .infolist {
+    background-color: rgb(150, 197, 228, 0.5);
+    border-bottom: 0.5px solid black;
+    box-shadow: 0 3px 3px black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: bold;
+    text-shadow: 0 3px 3px #3275ce;
+    padding: 10px 0 10px 0;
+}
+
+.infolist label {
+    margin-right: 250px;
+}
+
+@media (max-width: 1302px){
+    .inputCard{
+        width: auto;
+    }
+    .form input {
+        font-size: 1.4rem;
+    }
+    .form button {
+        font-size: 1.4rem;
+    }
+    .inputCard {
+        width: 500px;
+    }
+
+    .weatherDetail {
+        width: 600px;
+    }
+    .weather-info {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1169px) {
+    .form input {
+        font-size: 13px;
+    }
+    .form button {
+        font-size: 13px;
+    }
+    .weather-info{
+        width: 400px;
+    }
+
+    .weather-info .infolist label {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .form input {
+        font-size: 1.4rem;
+    }
+
+    .form button {
+        font-size: 1.4rem;
+    }
+
+    .inputCard {
+        width: 800px;
+    }
+    .weather-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inputCard {
+        height: 100vh;
+    }
+    .weatherDetail {
+        width: 800px;
+        margin: 5%;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 840px){
+    .inputCard {
+        width: 600px;
+    }
+    .weatherDetail {
+        width: 600px;
+        padding-bottom: 10px;
+    }
+    .weather-info {
+        width: 550px;
+    }
+    .weather-info .infolist {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .inputCard {
+        width: 350px;
+    }
+
+    .inputCard input {
+        font-size: 15px;
+    }
+
+    .inputCard button {
+        font-size: 15px;
+    }
+    .weatherDetail {
+        width: 350px;
+    }
+    .weather-info {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .weather-info .infolist {
+        width: 300px;
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+
+    .infolist label {
+        margin-right: 0;
+    }
+}
